@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dashboard | Result Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div>
+                <h2>🎓 Result Analysis</h2>
+                <p>Student Portal</p>
+            </div>
+            <nav class="menu"><button id="dashboardBtn">🏠 Dashboard</button><button id="resultBtn">📊 My
+                    Result</button><button id="rankBtn">🏆 Rank Analysis</button><button id="logoutBtn">🚪
+                    Logout</button></nav>
+        </aside>
+        <main class="main">
+            <div class="profile-top">
+                <div>
+                    <p class="muted">WELCOME BACK 👋</p>
+                    <h1>Student Dashboard</h1>
+                    <p class="subtitle">Your academic performance at a glance.</p>
+                </div><button class="btn secondary" id="profileBtn">👤 Profile</button>
+            </div>
+            <section class="card">
+                <h2>Student Details</h2>
+                <div class="detail-grid">
+                    <div class="detail"><small>Name</small><strong id="studentName">Loading...</strong></div>
+                    <div class="detail"><small>USN</small><strong id="studentUSN">Loading...</strong></div>
+                    <div class="detail"><small>Branch</small><strong id="branch">Loading...</strong></div>
+                    <div class="detail"><small>Semester</small><strong id="semester">--</strong></div>
+                    <div class="detail"><small>Academic Year</small><strong id="year">--</strong></div>
+                    <div class="detail"><small>Email</small><strong id="profileEmail">--</strong></div>
+                </div>
+            </section>
+            <section class="summary-grid">
+                <div class="summary"><small>SGPA</small><strong id="sgpa">--</strong></div>
+                <div class="summary"><small>CGPA</small><strong id="cgpa">--</strong></div>
+                <div class="summary"><small>Percentage</small><strong id="percentage">--</strong></div>
+                <div class="summary"><small>Result</small><strong id="result">--</strong></div>
+                <div class="summary"><small>Backlog</small><strong id="backlog">0</strong></div>
+            </section>
+            <section class="card" id="resultSection">
+                <div class="profile-top">
+                    <div>
+                        <h2>Subject-wise Result</h2>
+                        <p class="muted">Semester examination performance</p>
+                    </div><select id="semesterSelect">
+                        <option value="1st">Semester 1</option>
+                        <option value="2nd">Semester 2</option>
+                        <option value="3rd">Semester 3</option>
+                        <option value="4th">Semester 4</option>
+                        <option value="5th">Semester 5</option>
+                        <option value="6th">Semester 6</option>
+                        <option value="7th">Semester 7</option>
+                        <option value="8th">Semester 8</option>
+                    </select>
+                </div>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Subject</th>
+                                <th>Credits</th>
+                                <th>Marks</th>
+                                <th>Grade</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultTable">
+                            <tr>
+                                <td colspan="6" class="empty">Loading result...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script_dashboard.js"></script>
+</body>
+
+</html>

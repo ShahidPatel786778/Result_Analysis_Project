@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Student Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand">🎓 <span>Result</span> Analysis</div><button class="btn secondary"
+            id="logoutBtn">Logout</button>
+    </header>
+    <main class="page">
+        <div class="hero">
+            <div class="icon">🔎</div>
+            <h1>Find Your Result</h1>
+            <p>Enter your college details and USN to continue.</p>
+        </div>
+        <section class="card">
+            <form id="studentForm">
+                <div class="form-grid">
+                    <div class="field"><label for="collegeCode">College Code</label><input id="collegeCode" required
+                            placeholder="e.g. 123"></div>
+                    <div class="field"><label for="branch">Branch</label><select id="branch" required>
+                            <option value="">Select Branch</option>
+                            <option>ECE</option>
+                            <option>CSE</option>
+                            <option>ISE</option>
+                            <option>EEE</option>
+                            <option>ME</option>
+                            <option>CV</option>
+                        </select></div>
+                    <div class="field full"><label for="usn">USN</label><input id="usn" required
+                            placeholder="Enter University Seat Number" autocomplete="off"></div>
+                    <div class="field full"><label>CAPTCHA</label>
+                        <div class="captcha"><span id="captchaText" class="captcha-code"></span><button type="button"
+                                class="btn secondary" id="refreshCaptcha">↻ Refresh</button></div>
+                    </div>
+                    <div class="field full"><input id="captchaInput" required maxlength="5" placeholder="Enter CAPTCHA">
+                    </div>
+                </div>
+                <p id="message" class="message"></p><button class="btn" type="submit">Continue to Dashboard →</button>
+            </form>
+        </section>
+    </main>
+    <div class="footer">Secure • Fast • Easy Access</div>
+    <script src="script_home.js"></script>
+</body>
+
+</html>
